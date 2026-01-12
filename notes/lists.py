@@ -14,3 +14,5 @@ r,g,b = white
 print(r)
 
 # Level info, start point info, preset data, anything you don't want changed!
+
+#Character lists, loot, passwords, , randomization
