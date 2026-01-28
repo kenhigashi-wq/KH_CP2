@@ -1,5 +1,4 @@
 #KH 2nd random password generator 
-
 import random
 #Make a list for lower characters
 lower = list("abcdefghijklmnopqrstuvwxyz")
