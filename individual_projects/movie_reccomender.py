@@ -42,11 +42,8 @@ def main():
         choice = input("choice: ")
         if choice == "1":
             print("Choose filters to apply (enter numbers separated by commas, e.g., 1,3):")
-            print("1.Genre" \
-            "2.Director" \
-            "3.Actor" \
-            "4.Length (min/max)")
-        filter = input("Fliters:")
+            print("1. Genre \n2. Director \n3. Actor \n4. Length (min/max)")
+        filter = input("Example interaction: Selected filters: ")
 
 main()
 
