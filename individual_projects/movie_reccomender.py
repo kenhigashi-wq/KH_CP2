@@ -13,8 +13,8 @@ else:
     for line in content:
         print(f"{line}")
 
-
-
+#test
+ 
 try:
     with open("individual_projects\movies.csv", mode = "r", newline = '') as sample:
         reader = csv.reader(sample)
@@ -46,5 +46,17 @@ def main():
             "2.Director" \
             "3.Actor" \
             "4.Length (min/max)")
+        filter = input("Fliters:")
 
 main()
+
+
+
+
+
+
+
+
+
+
+
