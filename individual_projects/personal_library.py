@@ -1,7 +1,5 @@
 #KH personal library project
 
-
-
 #make a preset book items list or dictionary thing
 library_items = [
     {"title": "The Hobbit", "author": "J.R.R Tolkien"},
@@ -14,12 +12,17 @@ library_items = [
     {"title": "Fablehaven", "author": "Brandon Mull"},
     {"title": "Inkheart", "author": "Cornelia Funke"},
 ]
+
 #book keys set WORTH 5 POINTS
+
 book_keys = set()
+
 #Make the loop for adding the stuff
+
 for book in library_items:
     key = book["title"].strip().lower() + "|" + book["author"].strip().lower()
     book_keys.add(key)
+
 #make a function for the viewing books
 def view():
     #if there is nothign in the library, tell the user that there are no books
@@ -29,6 +32,7 @@ def view():
     #if not, just show them the books
     for book in library_items:
         print(book["title"] + " by " + book["author"])
+
 #make a function for adding books
 def add():
     title = input("Title: ").strip()#input for title and author
@@ -48,6 +52,7 @@ def add():
     book_keys.add(key)
     #tell them they added the book and author
     print(f"You have added {title} by {author}")
+
 #make a function for removing items off the library
 def remove():
     #same thing, if theres nothing, theres no boos to remove. If theres non tell them
@@ -77,6 +82,7 @@ def remove():
         book_keys.remove(removed_key)
     #report to user
     print("You have removed" + removed["title"] + " by " + removed["author"])
+
 #Make a function for seraching book titles
 def search():
     #print their options
@@ -99,7 +105,7 @@ def search():
         return
     #if they want to be trolling us, tell em that we have a specialized idiot proof just for them
     if search == "":
-        print("You entered nothing. YOu are stoopid")
+        print("You entered nothing.")
         return
     #make a list for matches
     matches = []
@@ -114,15 +120,16 @@ def search():
     #if no probelm, show them their searched book
     for book in matches:
         print(book["title"] + " by " + book["author"])
+
 #make the function for main
 def main():
     while True:
         #display the stuff
         print("Main menu:")
-        print("1. View")
-        print("2. Add")
-        print("3. Remove")
-        print("4. Search")
+        print("1. View Items")
+        print("2. Add Items")
+        print("3. Remove Items")
+        print("4. Search Items")
         print("5. Exit")
         choice = input("Choose an action(1-5): ")
         #if the user chooses one, let them view the stuff they want
@@ -144,5 +151,6 @@ def main():
         #if anything else is chose, tell them its not available
         else:
             print("Enter a number from 1 to 5")
+    
 #call the main function to start the thing
 main()
