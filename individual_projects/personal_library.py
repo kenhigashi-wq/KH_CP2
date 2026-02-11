@@ -14,10 +14,9 @@ library_items = [
 ]
 
 #book keys set WORTH 5 POINTS
-
 book_keys = set()
 
-#Make the loop for adding the stuff
+#Make the loop for adding the shtuff
 
 for book in library_items:
     key = book["title"].strip().lower() + "|" + book["author"].strip().lower()
