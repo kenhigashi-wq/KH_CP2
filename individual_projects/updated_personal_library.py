@@ -128,44 +128,50 @@ def delete_item():
     dirty = True
 
 #Start the program
-file_name =  input(f"Enter your data file path: ").strip() or "library.csv"
-load_library()
 
-while True:
-    print("\nMenu:")
-    print("1. Show simple list")
-    print("2. Show detailed list")
-    print("3. Add item")
-    print("4. Update item")
-    print("5. Delete item")
-    print("6. Save")
-    print("7. Reload")
-    print("8 Exit")
+def main():
+    global file_name, dirty
 
-    c = input("Choose from 1 to 8: ")
+    file_name =  input(f"Enter your data file path: ").strip() or "library.csv"
+    load_library()
 
-    if c == "1":
-        view_simple()
-    elif c == "2":
-        view_detailed()
-    elif c == "3":
-        add_item()
-    elif c == "4":
-        update_item()
-    elif c == "5":
-        delete_item()
-    elif c == "6":
-        save_library()
-        dirty = False
-    elif c == "7":
-        if dirty and input("Unsaved, reload anyway?(y/n)") != "y":
-            continue
-        load_library(); dirty = False
-        print("Reloaded")
-    elif c == "8":
-        if dirty and input("Save before exit?(y/n)") == "y":
+    while True:
+        print("\nMenu:")
+        print("1. Show simple list")
+        print("2. Show detailed list")
+        print("3. Add item")
+        print("4. Update item")
+        print("5. Delete item")
+        print("6. Save")
+        print("7. Reload")
+        print("8 Exit")
+
+        c = input("Choose from 1 to 8: ").strip()
+
+        if c == "1":
+            view_simple()
+        elif c == "2":
+            view_detailed()
+        elif c == "3":
+            add_item()
+        elif c == "4":
+            update_item()
+        elif c == "5":
+            delete_item()
+        elif c == "6":
             save_library()
-        print("BYYYYYE")
-        break
-    else:
-        print("Invalid")
+            dirty = False
+        elif c == "7":
+            if dirty and input("Unsaved, reload anyway?(y/n)") != "y":
+                continue
+            load_library(); dirty = False
+            print("Reloaded")
+        elif c == "8":
+            if dirty and input("Save before exit?(y/n)") == "y":
+                save_library()
+            print("BYYYYYE")
+            break
+        else:
+            print("Invalid")
+
+main()
