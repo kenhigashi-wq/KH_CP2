@@ -3,7 +3,7 @@ import csv
 #Make the four meaningful fields and make some variables
 fields = ["title", "creator", "year", "genre"]
 library = []
-dirty = False
+valid = False
 file_name = ""
 
 #Make the loading and saving functions first
@@ -81,7 +81,7 @@ def prompt_year(default = None):
 
 #make a function for adding books
 def add_item():
-    global dirty
+    global valid
     title = input("Title: ").strip()#input for title and author
     creator = input("By: ").strip()#input for the creator
     year = prompt_year()#input for the year thing
@@ -90,12 +90,12 @@ def add_item():
         print("Title, creator, and genre are required")
         return
     library.append({"title": title, "creator": creator, "year": year, "genre": genre})
-    dirty = True
+    valid = True
     print("Item added")
 
 #Function for updating item
 def update_item():
-    global dirty
+    global valid
     view_simple()#Call the simple view
     choice = input("Update which number: ").strip()#ask which one they want to update
     if not choice.isdigit() or not (1 <= int(choice) <= len(library)):#idiot proof once more
@@ -108,13 +108,13 @@ def update_item():
     new_year = prompt_year(item["year"])
     new_genre = input(f"Genre [{item['genre']}]: ").strip() or item["genre"]
     item.update(title = new_title, creator = new_creator, year = new_year, genre = new_genre)
-    dirty = True
+    valid = True
     print("Succesfully Updated")
 
 
 #make a function for removing items off the library
 def delete_item():
-    global dirty
+    global valid
     #call the viewing simple
     view_simple()
     #ask for which one to delete
@@ -125,12 +125,12 @@ def delete_item():
         return
     removed = library.pop(int(choice) - 1)
     print(f"Deleted {removed['title']} - {removed['creator']}")
-    dirty = True
+    valid = True
 
 #Start the program
 
 def main():
-    global file_name, dirty
+    global file_name, valid
 
     file_name =  input(f"Enter your data file path: ").strip() or "library.csv"
     load_library()
@@ -160,14 +160,14 @@ def main():
             delete_item()
         elif c == "6":
             save_library()
-            dirty = False
+            valid = False
         elif c == "7":
-            if dirty and input("Unsaved, reload anyway?(y/n)") != "y":
+            if valid and input("Unsaved, reload anyway?(y/n)") != "y":
                 continue
-            load_library(); dirty = False
+            load_library(); valid = False
             print("Reloaded")
         elif c == "8":
-            if dirty and input("Save before exit?(y/n)") == "y":
+            if valid and input("Save before exit?(y/n)") == "y":
                 save_library()
             print("BYYYYYE")
             break
