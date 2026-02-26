@@ -1,4 +1,7 @@
 #KH fractal function
+import turtle
+
+
 
 def main():
     print("Welcome to the Sierpinski Triangle Generator! This program creates a Sierpinski Triangle fractal using recursion.")
