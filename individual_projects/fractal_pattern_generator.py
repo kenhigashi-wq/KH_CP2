@@ -17,8 +17,9 @@ screen.bgcolor(back_ground_color)
 def triangle():
     
 
-
+#helpe 
 done()
+pass
 
 '''def triangle():
     
