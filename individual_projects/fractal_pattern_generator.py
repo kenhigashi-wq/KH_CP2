@@ -1,11 +1,32 @@
 #KH fractal function
-import turtle
+from turtle import *#import turtle
+#tracer to
+tracer(0)
+#ask for a depth
+depth = int(input("Enter recursion depth (1-5):"))
+#ask fr a background color
+back_ground_color = input("Enter triangle color (e.g., red, blue, green): ").strip()
+#make a variable for a screen
+screen = Screen()
+
+if back_ground_color == "":
+    back_ground_color = "pink"
+
+screen.bgcolor(back_ground_color)
+
+def triangle():
+    
 
 
+done()
 
-def main():
-    print("Welcome to the Sierpinski Triangle Generator! This program creates a Sierpinski Triangle fractal using recursion.")
-    depth = input("Enter recursion depth (1-5): ")
-    tri_color = input("Enter triangle color (e.g., red, blue, green): ")
-    print("Generating Sierpinski Triangle...")
+'''def triangle():
+    
 
+
+forward(100)
+left(120)
+forward(100)
+left(120)
+forward(100)
+'''
