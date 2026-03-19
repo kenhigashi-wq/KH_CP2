@@ -1,8 +1,8 @@
 %!PS-Adobe-3.0 EPSF-3.0
 %%Creator: Tk Canvas Widget
 %%Title: Window .!canvas
-%%CreationDate: Mon Mar  2 10:47:25 2026
-%%BoundingBox: -173 -8 786 801
+%%CreationDate: Wed Mar  4 15:33:34 2026
+%%BoundingBox: -53 92 666 700
 %%Pages: 1
 %%DocumentData: Clean7Bit
 %%Orientation: Portrait
@@ -77,9 +77,9 @@ baselineSampler 0 196 put
 %%Page: 1 1
 save
 306.0 396.0 translate
-0.7496 0.7496 scale
-3 -539 translate
--642 1078 moveto 636 1078 lineto 636 0 lineto -642 0 lineto closepath clip newpath
+0.75 0.75 scale
+3 -404 translate
+-482 808 moveto 476 808 lineto 476 0 lineto -482 0 lineto closepath clip newpath
 gsave
 grestore
 gsave
