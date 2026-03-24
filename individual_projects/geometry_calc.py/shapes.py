@@ -14,7 +14,7 @@ class Circle:
         
     #make the function for perimeter
     def perimeter(self):
-        return round(math.pi ** (self.radius), 2)
+        return round(2 * math.pi * self.radius, 2)
     
     #Display all the info        
     def display_info(self):
@@ -23,6 +23,14 @@ class Circle:
         print(f"Area: {self.area()}")
         print(f"Perimeter: {self.perimeter()}")
         print(f"Diameter: {self.radius * 2}")
+
+    #formula guisde
+    @staticmethod
+    def formula_guide():
+        print("\nCircle Formulas:")
+        print("Area = π * r^2")
+        print("Perimeter = 2 * π * r")
+
 
 #make class for a rectangle
 class Rectangle:
@@ -47,6 +55,16 @@ class Rectangle:
         print(f"Area: {self.area()}")
         print(f"Perimeter: {self.perimeter()}")
 
+    #funciton for formulas
+    
+    # Formula guide
+    @staticmethod
+    def formula_guide():
+        print("\nRectangle Formulas:")
+        print("Area = length * width")
+        print("Perimeter = 2 * (length + width)")
+
+
 #make a class for a square
 class Square:
     #Initialize
@@ -67,6 +85,14 @@ class Square:
         print(f"Side: {self.side}")
         print(f"Area: {self.area()}")
         print(f"Perimeter: {self.perimeter()}")
+
+    #Make a function for showing formula for aqurae
+    @staticmethod
+    def formula_guide():
+        print("\nSquare Formulas:")
+        print("Area = side^2")
+        print("Perimeter = 4 * side")
+
 
 #Make a class for a triangle
 class Triangle:
@@ -91,4 +117,12 @@ class Triangle:
         print(f"Height: {self.height}")
         print(f"Area: {self.area()}")
         print(f"Perimeter: {self.perimeter()}")
+
+    #Function for showing the formula
+    @staticmethod
+    def formula_guide():
+        print("\nRight Triangle Formulas:")
+        print("Area = (1/2) * base * height")
+        print("Perimeter = base + height + √(base^2 + height^2)")
+
 
