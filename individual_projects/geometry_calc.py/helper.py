@@ -63,3 +63,4 @@ class ShapeManager:
             self.shapes.sort(key=lambda s: s[1].perimeter())
             
         print("Shapes sorted")
+        
