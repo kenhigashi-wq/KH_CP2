@@ -42,3 +42,30 @@ class GradeBook:
 
         print(f"Total Students: {len(self.students)}")
 
+    # bonus , Class Statistics
+    def class_average(self):
+
+        averages = [
+            student.calculate_average()
+            for student in self.students
+            if student.calculate_average() is not None
+        ]
+
+        if not averages:
+            return None
+        return sum(averages) / len(averages)
+
+    def highest_grade(self):
+
+        all_grades = [grade for student in self.students for grade in student.grades]
+        if not all_grades:
+            return None
+        return max(all_grades)
+
+    def lowest_grade(self):
+
+        all_grades = [grade for student in self.students for grade in student.grades]
+        if not all_grades:
+            return None
+        return min(all_grades)
+    
