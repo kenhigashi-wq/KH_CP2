@@ -1,5 +1,6 @@
 #KH second financial calculator
-#TEst
+#TEsttestrrr
+#fk
 #function for savings calculator
 def savings():
     goal = float(input("What amount are you saving to: $"))#Make input for goal
