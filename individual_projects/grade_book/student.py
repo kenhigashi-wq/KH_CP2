@@ -15,7 +15,7 @@ class Student:
             return None
         return sum(self.grades) / len(self.grades)
     
-    def get_letter_grafe(self):
+    def get_letter_grade(self):
         avg = self.calculate_average()
         if avg is None:
             return "N/A"
