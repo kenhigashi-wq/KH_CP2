@@ -3,7 +3,7 @@ import math
 import random
 
 
-POPUP_COUNT = 15       # How many pop-ups to spawn
+POPUP_COUNT = 50       # How many pop-ups to spawn
 POPUP_WIDTH = 120     # Width of each pop-up
 POPUP_HEIGHT = 120     # Height of each pop-up
 ROTATION_SPEED = 8  # Degrees per frame (higher = faster)
