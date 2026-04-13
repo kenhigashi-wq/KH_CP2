@@ -18,7 +18,7 @@ projects = {
             "Challenge:\n"
             "- Handling unsupported or invalid characters"
         ),
-        "path": "../individual_projects/simple_morse_code.py"
+        "path": "individual_projects/simple_morse_code.py"
     },
     "Geometry Calculator": {
         "info": (
@@ -29,7 +29,7 @@ projects = {
             "Challenge:\n"
             "- Searching up formulas for everysingle one of them because I don't remember tham"
         ),
-        "path": "../individual_projects/geometry_calc.py"
+        "path": "individual_projects/geometry_calc/main.py"
     },
     "Grade Book": {
         "info": (
@@ -40,7 +40,7 @@ projects = {
             "Challenge:\n"
             "- Typing everything out correctly"
         ),
-        "path": "../individual_projects/grade_book/grade_book.py"
+        "path": "individual_projects/grade_book/main.py"
     },
     "Financial Calculator": {
         "info": (
@@ -51,7 +51,7 @@ projects = {
             "Challenge:\n"
             "- Maintaining calculation accuracy"
         ),
-        "path": "../individual_projects/financial_calculator.py"
+        "path": "individual_projects/financial_calculator.py"
     }
 }
 
