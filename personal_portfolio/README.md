@@ -5,7 +5,7 @@ The portfolio a programming resume and allows users to view project descriptions
 
 ## How to Run
 1. Make sure Python is installed
-2. Navigate to the `personal_portfolio` folder
+2. Navigate to the `portfoilo.py` folder
 3. Run the file:
 4. Click on a project to view its description
 5. Click **Run Project** to launch the selected program
