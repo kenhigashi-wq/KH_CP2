@@ -17,6 +17,7 @@ projects = {
             "- Processing strings character by character\n\n"
             "Challenge:\n"
             "- Handling unsupported or invalid characters"
+            "- Also making the morse code stuff"
         ),
         "path": "individual_projects/simple_morse_code.py"
     },
@@ -69,7 +70,7 @@ def run_project():
     if not os.path.exists(path):
         messagebox.showerror(
             "File Not Found",
-            "Project file not found.\nMake sure the project is in the correct folder."
+            "Project file not found.\nMake sure the project is in the correct folder"
         )
         return
 
