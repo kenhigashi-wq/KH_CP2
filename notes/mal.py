@@ -3,11 +3,11 @@ import math
 import random
 
 
-POPUP_COUNT = 50       # How many pop-ups to spawn
-POPUP_WIDTH = 120     # Width of each pop-up
-POPUP_HEIGHT = 120     # Height of each pop-up
-ROTATION_SPEED = 8  # Degrees per frame (higher = faster)
-ORBIT_RADIUS = 150    # Distance from the mouse cursor
+POPUP_COUNT = 50      # How many pop-ups to spawn
+POPUP_WIDTH = 12    # Width of each pop-up
+POPUP_HEIGHT = 100     # Height of each pop-up
+ROTATION_SPEED = 15  # Degrees per frame (higher = faster)
+ORBIT_RADIUS = 100    # Distance from the mouse cursor
 
 
 def start_multi_prank():
@@ -26,8 +26,8 @@ def start_multi_prank():
         win.geometry(f"{POPUP_WIDTH}x{POPUP_HEIGHT}")
         
         # Give each one a random color for extra chaos
-        color = random.choice(["red", "orange", "yellow", "purple", "black", "pink"])
-        label = tk.Label(win, text="死", fg="white", bg=color, font=("Arial", 10, "bold"))
+        color = random.choice(["white"])
+        label = tk.Label(win, text="死", fg="black", bg=color, font=("Arial", 10, "bold"))
         label.pack(expand=True, fill="both")
         
         # Block the close button (Alt+F4 still works on the active window)
@@ -51,6 +51,8 @@ def start_multi_prank():
             angles[i] = (angles[i] + ROTATION_SPEED) % 360
 
         root.after(10, update_swarm)
+
+
 
     update_swarm()
     root.mainloop()
